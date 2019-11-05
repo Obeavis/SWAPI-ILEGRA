@@ -1,0 +1,42 @@
+.box {
+  //max-width: 600px;
+  position: relative;
+  display: flex;
+  border-radius: 5px;
+  box-shadow: 0px 0px 40px -8px rgba(61, 61, 61, 1);
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+  }
+
+  .span-box {
+    background: rgba(202, 202, 202, 0.7);
+    position: absolute;
+    bottom: 17%;
+    min-width: 150px;
+
+    .thumb-title {
+      display: block;
+      padding: 1rem;
+    }
+
+    .thumb-date {
+      display: inline-block;
+      background-color: rgba(194, 151, 0, 1);
+      position: absolute;
+      top: 80%;
+      left: 10%;
+      border-radius: 3px;
+      letter-spacing: 0;
+      padding: 0.5rem;
+      z-index: 2;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .box {
+    box-shadow: none !important;
+  }
+}

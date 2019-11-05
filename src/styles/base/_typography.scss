@@ -1,0 +1,100 @@
+/**
+ * Basic typography style for copy text
+ */
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts//Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("../../assets/fonts//Roboto-Bold.ttf");
+}
+
+$font-primary: "Roboto", sans-serif;
+$font-primary-bold: "Roboto Bold", sans-serif;
+
+.text-bold {
+  font-family: $font-primary-bold;
+}
+
+/* Font Size */
+.text-1 {
+  font-size: 0.8rem !important;
+}
+
+.text-2 {
+  font-size: 0.9rem !important;
+}
+
+.text-3 {
+  font-size: 1rem !important;
+}
+
+.text-4 {
+  font-size: 1.2rem !important;
+}
+
+.text-5 {
+  font-size: 1.5rem !important;
+}
+
+.text-6 {
+  font-size: 1.8rem !important;
+}
+
+.text-7 {
+  font-size: 2rem !important;
+}
+
+.text-8 {
+  font-size: 2.3rem !important;
+}
+
+.text-9 {
+  font-size: 2.5rem !important;
+}
+
+.text-10 {
+  font-size: 2.75rem !important;
+}
+
+.text-11 {
+  font-size: 3rem !important;
+}
+
+.text-12 {
+  font-size: 3.5rem !important;
+}
+
+.text-13 {
+  font-size: 4rem !important;
+}
+
+.text-14 {
+  font-size: 4.5rem !important;
+}
+
+.text-15 {
+  font-size: 5rem !important;
+}
+
+.text-16 {
+  font-size: 5.5rem !important;
+}
+
+.text-17 {
+  font-size: 6rem !important;
+}
+
+.text-18 {
+  font-size: 6.5rem !important;
+}
+
+.text-19 {
+  font-size: 7rem !important;
+}
+
+.text-20 {
+  font-size: 7.5rem !important;
+}

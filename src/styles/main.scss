@@ -1,0 +1,32 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+/* @import
+  'abstracts/abstracts'; // variables - functions - mixins */
+
+// 2. Vendors
+@import
+  'vendors/vendors';
+
+// 3. Base stuff
+@import
+  'base/base';
+
+
+// 4. Layout-related sections
+/* @import
+  'layouts/layouts', // Header - Footer */
+
+  
+// 5. Components
+@import
+'components/components';
+
+/*
+// 5. Page-specific styles
+@import
+  'pages/pages'; //home - login - 404 not found
+
+// 6. Themes
+@import
+  'themes/themes';  // dafault -- dark - light*/

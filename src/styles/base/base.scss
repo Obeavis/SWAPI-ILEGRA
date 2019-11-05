@@ -1,0 +1,18 @@
+/**
+ * Import all base stylesheet
+ * Colors
+ * Typography
+ * Fonts
+ * Helpers
+ */
+
+@import '/typography';
+
+body {
+	background: url("../../assets/images/background.jpg");
+	font-family: $font-primary;
+}
+
+.main {
+	margin-top: 120px;
+}
