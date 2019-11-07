@@ -1,6 +1,11 @@
 Projeto criado para o teste de desenvolvedor frontend para a Ilegra.
 Ainda com muito a ser feito.
 
+Projeto pode ser visto rodando aqui : https://ilegra-swapi.herokuapp.com/
+
+[Live Demo](https://ilegra-swapi.herokuapp.com/).
+
+
 Para rodar faça o clone ou o download e após use o comando : 
 ### `yarn install`
 ou
