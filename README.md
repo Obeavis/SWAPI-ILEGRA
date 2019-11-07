@@ -6,6 +6,10 @@ Projeto pode ser visto rodando aqui : https://ilegra-swapi.herokuapp.com/
 [Live Demo](https://ilegra-swapi.herokuapp.com/).
 
 
+Projeto usando a SWAPI versão para GraphQL que pode ser vista aqui :
+[swapi-graphql](https://github.com/graphql/swapi-graphql)
+
+
 Para rodar faça o clone ou o download e após use o comando : 
 ### `yarn install`
 ou
