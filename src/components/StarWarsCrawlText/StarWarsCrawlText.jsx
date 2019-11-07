@@ -4,12 +4,12 @@ import logo from "../../assets/images/star-wars-logo.png";
 import "./StarWarsCrawlText.scss";
 
 const StarWarsCrawlText = (props) => (
-	<div className="star-wars-intro">
+	<div className="star-wars-intro" key="aushauhsu">
 
 		<p className="intro-text">
 			A long time ago in a galaxy far, <br />
 			far away...
-            </p>
+        </p>
 
 		<h2 className="main-logo">
 			<img
@@ -31,7 +31,7 @@ const StarWarsCrawlText = (props) => (
 					<br /><br />
 					<span>
 						Release Date: <Moment format="LL">
-							{props.film.releaseDate}
+							{new Date(props.film.releaseDate)}
 						</Moment>
 					</span>
 				</p>

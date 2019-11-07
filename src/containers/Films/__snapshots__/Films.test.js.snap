@@ -1,0 +1,236 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Films container matches the snapshot 1`] = `
+<div
+  className="film-select container"
+>
+  <div
+    className="row"
+  >
+    <div
+      className="mb-5 col-xl-4 col-lg-6"
+      onClick={[Function]}
+    >
+      <div
+        className="box-films box"
+      >
+        <img
+          alt="A New Hope"
+          className="img-fluid"
+          src="episode-4.jpg"
+        />
+        <span
+          className="span-box"
+        >
+          <span
+            className="thumb-title text-bold text-center"
+          >
+            A New Hope
+          </span>
+          <span
+            className="thumb-date text-1 text-bold"
+          >
+            <time
+              dateTime={"1977-05-25T00:00:00.000Z"}
+            >
+              May 24, 1977
+            </time>
+          </span>
+        </span>
+      </div>
+    </div>
+    <div
+      className="mb-5 col-xl-4 col-lg-6"
+      onClick={[Function]}
+    >
+      <div
+        className="box-films box"
+      >
+        <img
+          alt="The Empire Strikes Back"
+          className="img-fluid"
+          src="episode-5.jpg"
+        />
+        <span
+          className="span-box"
+        >
+          <span
+            className="thumb-title text-bold text-center"
+          >
+            The Empire Strikes Back
+          </span>
+          <span
+            className="thumb-date text-1 text-bold"
+          >
+            <time
+              dateTime={"1980-05-17T00:00:00.000Z"}
+            >
+              May 16, 1980
+            </time>
+          </span>
+        </span>
+      </div>
+    </div>
+    <div
+      className="mb-5 col-xl-4 col-lg-6"
+      onClick={[Function]}
+    >
+      <div
+        className="box-films box"
+      >
+        <img
+          alt="Return of the Jedi"
+          className="img-fluid"
+          src="episode-6.jpg"
+        />
+        <span
+          className="span-box"
+        >
+          <span
+            className="thumb-title text-bold text-center"
+          >
+            Return of the Jedi
+          </span>
+          <span
+            className="thumb-date text-1 text-bold"
+          >
+            <time
+              dateTime={"1983-05-25T00:00:00.000Z"}
+            >
+              May 24, 1983
+            </time>
+          </span>
+        </span>
+      </div>
+    </div>
+    <div
+      className="mb-5 col-xl-4 col-lg-6"
+      onClick={[Function]}
+    >
+      <div
+        className="box-films box"
+      >
+        <img
+          alt="The Phantom Menace"
+          className="img-fluid"
+          src="episode-1.jpg"
+        />
+        <span
+          className="span-box"
+        >
+          <span
+            className="thumb-title text-bold text-center"
+          >
+            The Phantom Menace
+          </span>
+          <span
+            className="thumb-date text-1 text-bold"
+          >
+            <time
+              dateTime={"1999-05-19T00:00:00.000Z"}
+            >
+              May 18, 1999
+            </time>
+          </span>
+        </span>
+      </div>
+    </div>
+    <div
+      className="mb-5 col-xl-4 col-lg-6"
+      onClick={[Function]}
+    >
+      <div
+        className="box-films box"
+      >
+        <img
+          alt="Attack of the Clones"
+          className="img-fluid"
+          src="episode-2.jpg"
+        />
+        <span
+          className="span-box"
+        >
+          <span
+            className="thumb-title text-bold text-center"
+          >
+            Attack of the Clones
+          </span>
+          <span
+            className="thumb-date text-1 text-bold"
+          >
+            <time
+              dateTime={"2002-05-16T00:00:00.000Z"}
+            >
+              May 15, 2002
+            </time>
+          </span>
+        </span>
+      </div>
+    </div>
+    <div
+      className="mb-5 col-xl-4 col-lg-6"
+      onClick={[Function]}
+    >
+      <div
+        className="box-films box"
+      >
+        <img
+          alt="Revenge of the Sith"
+          className="img-fluid"
+          src="episode-3.jpg"
+        />
+        <span
+          className="span-box"
+        >
+          <span
+            className="thumb-title text-bold text-center"
+          >
+            Revenge of the Sith
+          </span>
+          <span
+            className="thumb-date text-1 text-bold"
+          >
+            <time
+              dateTime={"2005-05-19T00:00:00.000Z"}
+            >
+              May 18, 2005
+            </time>
+          </span>
+        </span>
+      </div>
+    </div>
+    <div
+      className="mb-5 col-xl-4 col-lg-6"
+      onClick={[Function]}
+    >
+      <div
+        className="box-films box"
+      >
+        <img
+          alt="The Force Awakens"
+          className="img-fluid"
+          src="episode-7.jpg"
+        />
+        <span
+          className="span-box"
+        >
+          <span
+            className="thumb-title text-bold text-center"
+          >
+            The Force Awakens
+          </span>
+          <span
+            className="thumb-date text-1 text-bold"
+          >
+            <time
+              dateTime={"2015-12-11T00:00:00.000Z"}
+            >
+              December 10, 2015
+            </time>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

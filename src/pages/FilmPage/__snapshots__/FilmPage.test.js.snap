@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilmPage Matches the snapshot 1`] = `
+<div
+  className="film-page"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="StarWarsCrawlText col"
+      >
+        <div
+          className="star-wars-intro"
+        >
+          <p
+            className="intro-text"
+          >
+            A long time ago in a galaxy far, 
+            <br />
+            far away...
+          </p>
+          <h2
+            className="main-logo"
+          >
+            <img
+              alt="The Phantom Menace"
+              src="star-wars-logo.png"
+            />
+          </h2>
+          <div
+            className="main-content"
+          >
+            <div
+              className="title-content"
+            >
+              <p
+                className="content-header"
+              >
+                EPISODE 1
+                 
+                <br />
+                The Phantom Menace
+              </p>
+              <p
+                className="content-body"
+              >
+                Turmoil has engulfed the
+Galactic Republic. The taxation
+of trade routes to outlying star
+systems is in dispute.
+
+Hoping to resolve the matter
+with a blockade of deadly
+battleships, the greedy Trade
+Federation has stopped all
+shipping to the small planet
+of Naboo.
+
+While the Congress of the
+Republic endlessly debates
+this alarming chain of events,
+the Supreme Chancellor has
+secretly dispatched two Jedi
+Knights, the guardians of
+peace and justice in the
+galaxy, to settle the conflict....
+                <br />
+                <br />
+                <span>
+                  Direct by: 
+                  George Lucas
+                </span>
+                <br />
+                <br />
+                <span>
+                  Release Date: 
+                  <time
+                    dateTime={"1999-05-19T00:00:00.000Z"}
+                  >
+                    May 18, 1999
+                  </time>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

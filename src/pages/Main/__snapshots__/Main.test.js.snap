@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Film Component matches the snapshot 1`] = `
+<div
+  className="main my-5"
+>
+  <div
+    className="root-select container"
+  >
+    <div
+      className="justify-content-center row"
+    >
+      <div
+        className="mb-4 col-xl-4 col-lg-6 col-11"
+        onClick={[Function]}
+      >
+        <div
+          className="box"
+        >
+          <img
+            alt="Films"
+            className="img-fluid"
+            src="all-films.jpg"
+          />
+          <span
+            className="span-box"
+          >
+            <span
+              className="thumb-title text-bold text-center"
+            >
+              Films
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        className="mb-4 col-xl-4 col-lg-6 col-11"
+      >
+        <div
+          className="box"
+        >
+          <img
+            alt="People"
+            className="img-fluid"
+            src="all-people.jpg"
+          />
+          <span
+            className="span-box"
+          >
+            <span
+              className="thumb-title text-bold text-center"
+            >
+              People
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        className="mb-4 col-xl-4 col-lg-6 col-11"
+      >
+        <div
+          className="box"
+        >
+          <img
+            alt=""
+            className="img-fluid"
+            src="all-starships.jpg"
+          />
+          <span
+            className="span-box"
+          >
+            <span
+              className="thumb-title text-bold text-center"
+            >
+              Starships
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="justify-content-center row"
+    >
+      <div
+        className="mb-4 col-xl-4 col-lg-6 col-11"
+      >
+        <div
+          className="box"
+        >
+          <img
+            alt=""
+            className="img-fluid"
+            src="all-vehicles.jpg"
+          />
+          <span
+            className="span-box"
+          >
+            <span
+              className="thumb-title text-bold text-center"
+            >
+              Vehicles
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        className="mb-4 col-xl-4 col-lg-6 col-11"
+      >
+        <div
+          className="box"
+        >
+          <img
+            alt=""
+            className="img-fluid"
+            src="all-species.jpg"
+          />
+          <span
+            className="span-box"
+          >
+            <span
+              className="thumb-title text-bold text-center"
+            >
+              Species
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        className="mb-4 col-xl-4 col-lg-6 col-11"
+      >
+        <div
+          className="box"
+        >
+          <img
+            alt=""
+            className="img-fluid"
+            src="all-planets.jpg"
+          />
+          <span
+            className="span-box"
+          >
+            <span
+              className="thumb-title text-bold text-center"
+            >
+              Planets
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,52 +1,37 @@
 import React, { useEffect } from "react";
-import { connect } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { Container, Row } from "react-bootstrap";
 import Films from "../../containers/Films/Films";
 import SomethingWentWrong from "../SomethingWentWrong/SomethingWentWrong"
 import BB8Loader from "../../components/BB8Loader/BB8Loader";
 
-const FilmsPage = (props) => {
+const FilmsPage = () => {
+	const dispatch = useDispatch();
+
 	useEffect(() => {
-		props.getAllFIlms();
+		dispatch({ type: 'GET_ALL_FILMS' })
 		// eslint-disable-next-line
-	}, [props.allFilms]);
+	}, []);
+
+	const allFilms = useSelector(state => state.allFilms);
 
 	return (
 		<div className="films">
-			{props.allFilms.error === true ?
+			{allFilms.error === true || Object.keys(allFilms).length <= 0 ?
 
 				<SomethingWentWrong />
 
-				: Object.keys(props.allFilms.films).length <= 0 ?
+				: Object.keys(allFilms.films).length <= 0 ?
 					<Container>
 						<Row className="justify-content-center mt-5">
 							<BB8Loader />
 						</Row>
 					</Container>
-					: <Films films={props.allFilms.films} />
+					: <Films films={allFilms.films} />
 			}
 		</div>
 	)
 }
 
-
-const mapStateToProps = state => ({
-	allFilms: state.allFilms
-});
-
-const mapDispatchToProps = dispatch => {
-	return {
-		getAllFIlms: () =>
-			dispatch({
-				type: "GET_ALL_FILMS"
-			})
-	};
-};
-
-export default withRouter(
-	connect(
-		mapStateToProps,
-		mapDispatchToProps
-	)(FilmsPage)
-);
+export default withRouter(FilmsPage);

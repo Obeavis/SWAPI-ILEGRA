@@ -3,7 +3,6 @@ import axios from '../../utils/axios';
 
 
 const getFilmFromAPi = (filmID) => {
-    console.log('filmID: ', filmID)
     return new Promise((resolve, reject) => {
         return axios.request({
             method: "POST",
@@ -16,9 +15,7 @@ const getFilmFromAPi = (filmID) => {
                     title
                     director
                     releaseDate
-                    producers
                     openingCrawl
-
                 }
             }`
         })

@@ -12,6 +12,7 @@ const gettAllFilmsFromAPi = () => {
 			data: `{
 				allFilms{
 					films {
+						id
 						episodeID
 						title
 						releaseDate

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component matches the snapshot 1`] = `
+<nav
+  className="justify-content-center bg-primary header fixed-top navbar navbar-expand navbar-light"
+>
+  <span
+    className="navbar-brand"
+  >
+    <img
+      alt=""
+      className="img-fluid"
+      height="100"
+      onClick={[Function]}
+      src="star-wars-logo.png"
+      width="150"
+    />
+  </span>
+</nav>
+`;

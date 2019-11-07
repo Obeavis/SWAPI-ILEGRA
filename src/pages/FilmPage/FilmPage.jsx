@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { connect } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
-import NotFound from "../Not-Found/NotFound";
+import NotFound from "../NotFound/NotFound";
 import SomethingWentWrong from "../SomethingWentWrong/SomethingWentWrong";
 import BB8Loader from "../../components//BB8Loader/BB8Loader";
 import StarWarsCrawlText from "../../components/StarWarsCrawlText/StarWarsCrawlText";
@@ -10,34 +10,39 @@ import StarWarsCrawlText from "../../components/StarWarsCrawlText/StarWarsCrawlT
 
 const FilmPage = (props) => {
 	const [error, setError] = useState(false);
+	const dispatch = useDispatch();
 
 	useEffect(() => {
 		const episode = parseInt(props.history.location.pathname.split('/')[2]);
 		if (isNaN(episode)) {
 			setError(true);
 		} else {
-			props.getFilm(episode);
+			dispatch({
+				type: "GET_FILM",
+				filmID: episode
+			});
 		}
 		// eslint-disable-next-line
-	}, [props.history.location.pathname]);
+	}, []);
+
+	const film = useSelector(state => state.film);
 
 	return (
-		<div className="film-page">
-			{error === true || props.film.filmNotFound === true ?
-				<NotFound />
-				: props.film.error === true ?
-					<SomethingWentWrong />
-					: Object.keys(props.film.film).length <= 0 ?
+		<div className="film-page" key={'uhasuhausha' + new Date()}>
+			{film.error === true || Object.keys(film).length <= 0 ?
+				<SomethingWentWrong />
+				: error === true || film.filmNotFound === true ?
+					<NotFound />
+					: Object.keys(film.film).length <= 0 ?
 						<Container>
 							<Row className="justify-content-center mt-5">
 								<BB8Loader />
 							</Row>
 						</Container>
-						:
-						<Container>
+						: <Container key={'StarWarsCrawlText'}>
 							<Row>
-								<Col className="StarWarsCrawlText">
-									<StarWarsCrawlText film={props.film.film} />
+								<Col className="StarWarsCrawlText" key={'teste'}>
+									<StarWarsCrawlText film={film.film} key={'teste'}/>
 								</Col>
 							</Row>
 						</Container>
@@ -46,23 +51,5 @@ const FilmPage = (props) => {
 		</div>
 	)
 }
-const mapStateToProps = state => ({
-	film: state.film
-});
 
-const mapDispatchToProps = dispatch => {
-	return {
-		getFilm: (filmID) =>
-			dispatch({
-				type: "GET_FILM",
-				filmID: filmID
-			})
-	};
-};
-
-export default withRouter(
-	connect(
-		mapStateToProps,
-		mapDispatchToProps
-	)(FilmPage)
-);
+export default withRouter(FilmPage);

@@ -23,7 +23,7 @@ const RootSelect = (props) => (
 					<span className="span-box">
 						<span className="thumb-title text-bold text-center">
 							Films
-								</span>
+						</span>
 					</span>
 				</div>
 			</Col>
@@ -38,7 +38,7 @@ const RootSelect = (props) => (
 					<span className="span-box">
 						<span className="thumb-title text-bold text-center">
 							People
-								</span>
+						</span>
 					</span>
 				</div>
 			</Col>
@@ -53,7 +53,7 @@ const RootSelect = (props) => (
 					<span className="span-box">
 						<span className="thumb-title text-bold text-center">
 							Starships
-								</span>
+						</span>
 					</span>
 				</div>
 			</Col>
@@ -70,7 +70,7 @@ const RootSelect = (props) => (
 					<span className="span-box">
 						<span className="thumb-title text-bold text-center">
 							Vehicles
-								</span>
+						</span>
 					</span>
 				</div>
 			</Col>
@@ -85,11 +85,11 @@ const RootSelect = (props) => (
 					<span className="span-box">
 						<span className="thumb-title text-bold text-center">
 							Species
-								</span>
+						</span>
 					</span>
 				</div>
 			</Col>
-			
+
 			<Col xs={11} lg={6} xl={4} className="mb-4">
 				<div className="box">
 					<img
@@ -100,7 +100,7 @@ const RootSelect = (props) => (
 					<span className="span-box">
 						<span className="thumb-title text-bold text-center">
 							Planets
-								</span>
+						</span>
 					</span>
 				</div>
 			</Col>

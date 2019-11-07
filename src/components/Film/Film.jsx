@@ -15,11 +15,12 @@ const Film = (props) => (
 				<span className="thumb-title text-bold text-center">{props.film.title}</span>
 				<span className="thumb-date text-1 text-bold">
 					<Moment format="LL">
-						{props.film.releaseDate}
-            		</Moment>
+						{new Date(props.film.releaseDate)}
+					</Moment>
 				</span>
 			</span>
 		</div>
 	</Col>
 );
+
 export default withRouter(Film);
