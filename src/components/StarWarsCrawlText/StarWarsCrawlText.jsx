@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Moment from 'react-moment';
 import logo from "../../assets/images/star-wars-logo.png";
 import "./StarWarsCrawlText.scss";
@@ -41,4 +42,9 @@ const StarWarsCrawlText = (props) => (
 	</div>
 
 );
+
+StarWarsCrawlText.propTypes = {
+	film: PropTypes.object
+};
+
 export default StarWarsCrawlText;

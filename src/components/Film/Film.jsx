@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
 import { Col } from "react-bootstrap";
 import Moment from 'react-moment';
@@ -22,5 +23,9 @@ const Film = (props) => (
 		</div>
 	</Col>
 );
+
+Film.propTypes = {
+	film: PropTypes.object
+};
 
 export default withRouter(Film);

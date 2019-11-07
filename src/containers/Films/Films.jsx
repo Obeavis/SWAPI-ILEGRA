@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Container, Row } from "react-bootstrap";
 import Film from "../../components/Film/Film";
 import "./Films.scss";
@@ -23,4 +24,7 @@ const Films = (props) => (
 	</Container>
 )
 
+Films.propTypes = {
+	Films: PropTypes.object
+};
 export default Films
