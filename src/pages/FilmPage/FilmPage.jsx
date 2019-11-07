@@ -28,21 +28,21 @@ const FilmPage = (props) => {
 	const film = useSelector(state => state.film);
 
 	return (
-		<div className="film-page" key={'uhasuhausha' + new Date()}>
-			{film.error === true || Object.keys(film).length <= 0 ?
+		<div className="film-page">
+			{film.error === true ?
 				<SomethingWentWrong />
 				: error === true || film.filmNotFound === true ?
 					<NotFound />
-					: Object.keys(film.film).length <= 0 ?
+					: film.film === null ?
 						<Container>
 							<Row className="justify-content-center mt-5">
-								<BB8Loader />
+								<BB8Loader/>
 							</Row>
 						</Container>
-						: <Container key={'StarWarsCrawlText'}>
+						: <Container>
 							<Row>
-								<Col className="StarWarsCrawlText" key={'teste'}>
-									<StarWarsCrawlText film={film.film} key={'teste'}/>
+								<Col className="StarWarsCrawlText">
+									<StarWarsCrawlText film={film.film}/>
 								</Col>
 							</Row>
 						</Container>

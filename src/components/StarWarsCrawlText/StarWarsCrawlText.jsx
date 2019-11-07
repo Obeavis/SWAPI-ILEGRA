@@ -5,7 +5,7 @@ import logo from "../../assets/images/star-wars-logo.png";
 import "./StarWarsCrawlText.scss";
 
 const StarWarsCrawlText = (props) => (
-	<div className="star-wars-intro" key="aushauhsu">
+	<div className="star-wars-intro">
 
 		<p className="intro-text">
 			A long time ago in a galaxy far, <br />

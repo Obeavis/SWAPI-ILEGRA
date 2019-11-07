@@ -2,24 +2,23 @@ import { createActions, createReducer } from "reduxsauce";
 
 //Action types e Creators
 export const { Types, Creators } = createActions({
-	films: {},
+	films: ['films'],
 	filmsError: ['status']
 });
 
 //Reducer Handlers
 const INITIAL_STATE = {
-	films: {},
+	films: null,
 	error: false
 }
 
 const films = (state = INITIAL_STATE, action) => {
-	const newState = { ...state };
-	newState.films = action.payload;
-	return newState;
+	return { ...state, films: action.payload };
 }
 
-const filmsError = (state = INITIAL_STATE, action) =>{
-    return { ...state, error: action.payload };
+
+const filmsError = (state = INITIAL_STATE, action) => {
+	return { ...state, error: action.payload };
 };
 
 

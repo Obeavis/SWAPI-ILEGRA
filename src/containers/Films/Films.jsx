@@ -17,7 +17,7 @@ const Films = (props) => (
 		<Row>
 			{props.films.map((film, i) => {
 				return (
-					<Film film={film} key={i} image={loadImage(film.episodeID)} />
+					<Film film={film} idMovie={i+1} image={loadImage(film.episodeID)} key={i}/>
 				)
 			})}
 		</Row>

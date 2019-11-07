@@ -16,12 +16,14 @@ describe("Film Component", () => {
 		title: "A New Hope"
 	};
 
+	const idMovie = 1;
+
 	const propsImage = require(`../../assets/images/films/episode-4.jpg`);
 
 	const component = (
 
 		<MemoryRouter initialEntries={['/films']}>
-			<Film film={film} image={propsImage} />
+			<Film film={film} image={propsImage} idMovie={idMovie}/>
 		</MemoryRouter>
 	)
 
@@ -67,7 +69,7 @@ describe("Film Component", () => {
 		wrapper.find('Col').simulate('click');
 
 		const pathnameAfterClick = wrapper.find('Router').props().history.location.pathname;
-		expect(pathnameAfterClick).toEqual('/films/4');
+		expect(pathnameAfterClick).toEqual('/films/1');
 	});
 
 })

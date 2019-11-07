@@ -1,5 +1,5 @@
 import React from "react";
-import { Provider } from 'react-redux'
+import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 import configureStore from "redux-mock-store";
 import Adapter from "enzyme-adapter-react-16";
@@ -60,7 +60,7 @@ describe("FilmsPage", () => {
     it("Renders <BB8Loader />", () => {
         store = mockStore({
             allFilms: {
-                films: {},
+                films: null,
                 error: false
             }
         });
@@ -79,7 +79,7 @@ describe("FilmsPage", () => {
     it("Renders <SomethingWentWrong />", () => {
         store = mockStore({
             allFilms: {
-                films: {},
+                films: null,
                 error: true
             }
         });

@@ -12,83 +12,87 @@ configure({ adapter: new Adapter() });
 
 
 describe("FilmPage", () => {
-    const mockStore = configureStore();
-    let store;
+	const mockStore = configureStore();
+	let store;
 
-    it("Matches the snapshot", () => {
-        store = mockStore({
-            film: {
-                "film": {
-                    "episodeID": 1,
-                    "title": "The Phantom Menace",
-                    "director": "George Lucas",
-                    "releaseDate": "1999-05-19",
-                    "openingCrawl": "Turmoil has engulfed the\r\nGalactic Republic. The taxation\r\nof trade routes to outlying star\r\nsystems is in dispute.\r\n\r\nHoping to resolve the matter\r\nwith a blockade of deadly\r\nbattleships, the greedy Trade\r\nFederation has stopped all\r\nshipping to the small planet\r\nof Naboo.\r\n\r\nWhile the Congress of the\r\nRepublic endlessly debates\r\nthis alarming chain of events,\r\nthe Supreme Chancellor has\r\nsecretly dispatched two Jedi\r\nKnights, the guardians of\r\npeace and justice in the\r\ngalaxy, to settle the conflict...."
-                },
-                "error": false,
-                "filmNotFound": false
-            }
-        });
+	it("Matches the snapshot", () => {
+		store = mockStore({
+			film: {
+				"film": {
+					"episodeID": 1,
+					"title": "The Phantom Menace",
+					"director": "George Lucas",
+					"releaseDate": "1999-05-19",
+					"openingCrawl": "Turmoil has engulfed the\r\nGalactic Republic. The taxation\r\nof trade routes to outlying star\r\nsystems is in dispute.\r\n\r\nHoping to resolve the matter\r\nwith a blockade of deadly\r\nbattleships, the greedy Trade\r\nFederation has stopped all\r\nshipping to the small planet\r\nof Naboo.\r\n\r\nWhile the Congress of the\r\nRepublic endlessly debates\r\nthis alarming chain of events,\r\nthe Supreme Chancellor has\r\nsecretly dispatched two Jedi\r\nKnights, the guardians of\r\npeace and justice in the\r\ngalaxy, to settle the conflict...."
+				},
+				"error": false,
+				"filmNotFound": false
+			}
+		});
 
-        const wrapper = mount(
-            <Provider store={store}>
-                <MemoryRouter>
-                    <FilmPage />
-                </MemoryRouter>
-            </Provider>
-        );
+		const wrapper = mount(
+			<Provider store={store}>
+				<MemoryRouter initialEntries={['/films/1']}>
+					<FilmPage />
+				</MemoryRouter>
+			</Provider>
+		);
 
-        const tree = renderer.create(wrapper).toJSON();
+		const tree = renderer.create(wrapper).toJSON();
 
-        expect(tree).toMatchSnapshot();
-    });
+		expect(tree).toMatchSnapshot();
+	});
 
-    it("Renders the <FilmPage />", () => {
-        const wrapper = mount(
-            <Provider store={store}>
-                <MemoryRouter initialEntries={['/films/1']}>
-                    <FilmPage />
-                </MemoryRouter>
-            </Provider>
-        );
+	it("Renders the <FilmPage />", () => {
+		const wrapper = mount(
+			<Provider store={store}>
+				<MemoryRouter initialEntries={['/films/1']}>
+					<FilmPage />
+				</MemoryRouter>
+			</Provider>
+		);
 
-        expect(wrapper.find('FilmPage').exists()).toEqual(true)
-    });
+		expect(wrapper.find('FilmPage').exists()).toEqual(true)
+	});
 
-    it("Renders <BB8Loader />", () => {
-        store = mockStore({
-            film: {
-                "film": {},
-                "error": false,
-                "filmNotFound": false
-            }
-        });
+	it("Renders <BB8Loader />", () => {
+		store = mockStore({
+			film: {
+				"film": null,
+				"error": false,
+				"filmNotFound": false
+			}
+		});
 
-        const wrapper = mount(
-            <Provider store={store}>
-                <MemoryRouter initialEntries={['/films/1']}>
-                    <FilmPage />
-                </MemoryRouter>
-            </Provider>
-        );
+		const wrapper = mount(
+			<Provider store={store}>
+				<MemoryRouter initialEntries={['/films/1']}>
+					<FilmPage />
+				</MemoryRouter>
+			</Provider>
+		);
 
-        expect(wrapper.find('BB8Loader').exists()).toEqual(true)
-    });
+		expect(wrapper.find('BB8Loader').exists()).toEqual(true)
+	});
 
-    it("Renders <SomethingWentWrong />", () => {
-        store = mockStore({
-            film: {}
-        });
+	it("Renders <SomethingWentWrong />", () => {
+		store = mockStore({
+			film: {
+				film: null,
+				error: true,
+				filmNotFound: false
+			}
+		});
 
-        const wrapper = mount(
-            <Provider store={store}>
-                <MemoryRouter>
-                    <FilmPage initialEntries={['/films/1']} />
-                </MemoryRouter>
-            </Provider>
-        );
+		const wrapper = mount(
+			<Provider store={store}>
+				<MemoryRouter initialEntries={['/films/1']}>
+					<FilmPage />
+				</MemoryRouter>
+			</Provider>
+		);
 
-        expect(wrapper.find('SomethingWentWrong').exists()).toEqual(true)
-    });
+		expect(wrapper.find('SomethingWentWrong').exists()).toEqual(true)
+	});
 
 })

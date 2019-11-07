@@ -9,15 +9,13 @@ export const { Types, Creators } = createActions({
 
 //Reducer Handlers
 const INITIAL_STATE = {
-	film: {},
+	film: null,
 	error: false,
 	filmNotFound: false
 }
 
 const film = (state = INITIAL_STATE, action) => {
-	const newState = { ...state };
-	newState.film = action.payload;
-	return newState;
+	return { ...state, film: action.payload };
 }
 
 const filmError = (state = INITIAL_STATE, action) =>{

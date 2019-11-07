@@ -5,7 +5,7 @@ import { Col } from "react-bootstrap";
 import Moment from 'react-moment';
 
 const Film = (props) => (
-	<Col lg={6} xl={4} className="mb-5" onClick={() => props.history.push(`/films/${props.film.episodeID}`)} >
+	<Col lg={6} xl={4} className="mb-5" onClick={() => props.history.push(`/films/${props.idMovie}`)}>
 		<div className="box-films box">
 			<img
 				alt={props.film.title}

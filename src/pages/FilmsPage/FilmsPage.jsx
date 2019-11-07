@@ -15,15 +15,13 @@ const FilmsPage = () => {
 	}, []);
 
 	const allFilms = useSelector(state => state.allFilms);
-
 	return (
 		<div className="films">
-			{allFilms.error === true || Object.keys(allFilms).length <= 0 ?
-
+			{allFilms.error === true ?
 				<SomethingWentWrong />
 
-				: Object.keys(allFilms.films).length <= 0 ?
-					<Container>
+				: allFilms.films === null ?
+					<Container >
 						<Row className="justify-content-center mt-5">
 							<BB8Loader />
 						</Row>
