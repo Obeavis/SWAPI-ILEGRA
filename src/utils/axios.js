@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-	baseURL: 'https://ilegra-swapi.herokuapp.com/',
+	baseURL: 'https://ilegra-swapi-graphql.herokuapp.com/',
 	timeout: 2000
 })
 
